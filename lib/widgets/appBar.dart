@@ -11,7 +11,7 @@ class appBar extends StatelessWidget implements PreferredSizeWidget{
      toolbarHeight: 60,
      toolbarOpacity: 1,
      elevation: 6,
-     backgroundColor: Colors.deepOrange,
+     backgroundColor: Colors.teal,
      foregroundColor: Colors.black,
      actions: [
        IconButton(
@@ -26,5 +26,5 @@ class appBar extends StatelessWidget implements PreferredSizeWidget{
 
   @override
   // TODO: implement preferredSize
-  Size get preferredSize => Size.fromHeight(60);
+  Size get preferredSize => Size.fromHeight(70);
 }
