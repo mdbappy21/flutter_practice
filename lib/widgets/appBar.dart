@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'snackBar.dart';
 
 class appBar extends StatelessWidget implements PreferredSizeWidget{
+  final String title;
+  appBar({required this.title});
+
   @override
   Widget build(BuildContext context) {
    return AppBar(
-     title: Text("Ostad Practice"),
+     title: Text(title),
      titleSpacing: 0,
      centerTitle: true,
      toolbarHeight: 60,
@@ -16,10 +19,9 @@ class appBar extends StatelessWidget implements PreferredSizeWidget{
      actions: [
        IconButton(
            onPressed: () {
-             snackBar.mySnackBar("Search Successfully done", context,
-                 duration: 500);
+             showAboutDialog(context: context);//about dialog
            },
-           icon: Icon(Icons.search_rounded))
+           icon: const Icon(Icons.details))
      ],
    );
   }
