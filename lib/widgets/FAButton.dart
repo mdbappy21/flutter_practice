@@ -24,7 +24,7 @@ class FAButton extends StatelessWidget {
         FloatingActionButton(
           elevation: 10,
           child: Icon(Icons.ac_unit),
-          onPressed: (){snackBar.mySnackBar("This is Floating Action 2", context);},
+          onPressed: (){snackBar.mySnackBar("This is Floating Action 2", context,backgroundColor: Colors.deepOrange);},
           backgroundColor: Colors.teal,
           foregroundColor: Colors.black,
         ),
