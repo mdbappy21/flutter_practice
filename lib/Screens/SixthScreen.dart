@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_practice/widgets/appBar.dart';
+import 'package:flutter_practice/widgets/newScreenNevigation.dart';
+import 'package:flutter_practice/Screens/SeventhScreen.dart';
 
 class SixthScreen extends StatelessWidget{
   List<String> StudentName = [
@@ -34,6 +36,21 @@ class SixthScreen extends StatelessWidget{
         body: SingleChildScrollView(
           child: Column(
             children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.deepOrange,
+                        foregroundColor: Colors.black),
+                    onPressed: () {
+                      newScreenNevigation.navigateToNextScreen(
+                          context, SeventhSecreen());
+                    },
+                    child: const Text('Next Screen Theme'),
+                  ),
+                ],
+              ),
               ListView.separated(
                 shrinkWrap: true,
                 primary: false,
